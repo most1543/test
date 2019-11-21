@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TU Delayed registration system</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tu.ac.th/templates/site/icons/favicon-16x16.png"/>
+        
+        <style>
+            * {box-sizing: border-box;}
+
+            *:focus {outline: none;}
+            body {
+                background-color: #ffffff;
+                padding: 170px;
+            }
+            
+            .login {
+                margin: 20px auto;
+                width: 350px;
+            }
+            
+            .login-screen {
+                background-color: #FFF;
+                padding: 20px;
+                border-radius: 5px
+            }
+
+            .app-title {
+                text-align: center;
+                margin-bottom: 20px
+            }
+            
+            .reg {
+                text-align: center;
+                font-family: 'Prompt', sans-serif;
+            }
+
+            .login-form {
+                text-align: center;
+            }
+            
+            .control-group {
+                margin-bottom: 10px;
+            }
+
+            input {
+                text-align: center;
+                background-color: #ECF0F1;
+                border: 2px solid transparent;
+                border-radius: 3px;
+                font-size: 16px;
+                font-weight: 200;
+                padding: 10px 0;
+                width: 300px;
+                transition: border .5s;
+            }
+
+            input:focus {
+                border: 2px solid #3498DB;
+                box-shadow: none;
+            }
+
+            .btn {
+                font-family: 'Prompt', sans-serif;
+                border: 2px solid transparent;
+                background: #D02D0A;
+                color: #ffffff;
+                font-size: 16px;
+                line-height: 25px;
+                padding: 10px 0;
+                text-decoration: none;
+                text-shadow: none;
+                border-radius: 3px;
+                box-shadow: none;
+                transition: 0.25s;
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .btn:hover {
+                background-color: #972208;
+            }
+
+            .login-link {
+                font-size: 12px;
+                color: #444;
+                display: block;
+                margin-top: 12px;
+            }
+        </style>
+        
+    </head>
+   
+    
+    <body background="https://greennews.agency/wp-content/uploads/2017/08/S__18423898.jpg">
+	<div class="login">
+		<div class="login-screen">
+                    <div class="app-title">
+                        <img src="https://tu.ac.th/uploads/media/logo/logo02.jpg" alt="bg" height="51" width="237">
+                    </div>
+                    
+                    <div class="reg">
+                        <p>ระบบการจดทะเบียนล่าช้า/เพิ่มล่าช้า</p>
+                    </div>
+
+                    <div class="login-form">
+			<div class="control-group">
+                            <input type="text" class="login-field" value="" placeholder="username" id="login-name">
+                            <label class="login-field-icon fui-user" for="login-name"></label>
+			</div>
+
+			<div class="control-group">
+                            <input type="password" class="login-field" value="" placeholder="password" id="login-pass">
+                            <label class="login-field-icon fui-lock" for="login-pass"></label>
+			</div>
+
+			<a class="btn btn-primary btn-large btn-block" href="p1.html">login</a>
+			<a class="login-link" href="https://accounts.tu.ac.th/Login.aspx">Lost your password?</a>
+                    </div>
+		</div>
+	</div>
+    </body>
+            
+</html>
