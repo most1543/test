@@ -117,11 +117,26 @@
                             <label class="login-field-icon fui-lock" for="login-pass"></label>
 			</div>
 
-			<a class="btn btn-primary btn-large btn-block" href="p1.html">login</a>
+			<a class="btn btn-primary btn-large btn-block" onclick="login()">login</a>
 			<a class="login-link" href="https://accounts.tu.ac.th/Login.aspx">Lost your password?</a>
                     </div>
 		</div>
 	</div>
+        
+        <script>
+            function login() {
+                let input = document.getElementById("login-name");
+                if(input.value === "6109650603" || input.value === "6109650363" || input.value === "6109650116" || input.value === "6109650298" || input.value === "6109650637") {
+                    window.location.href='p1.html';
+                } else if(input.value === "notteacher"){
+                    window.location.href='p7.html';
+                } else if(input.value === "iamteacher"){
+                    window.location.href='p8.html';
+                } else {
+                    alert("กรุณากรอก username หรือ password ให้ถูกต้อง")
+                }
+            }
+        </script>  
     </body>
             
 </html>

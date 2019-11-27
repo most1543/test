@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TU Delayed registration system</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tu.ac.th/templates/site/icons/favicon-16x16.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style> 
+        /*CSS*/
+            /*ส่วน menu มุมขวาบน*/
+            .dropbtn {
+                background-color: #c00524;
+                color: white;
+                padding: 36.5px;
+                font-size: 40px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #fec551;
+            }
+
+            .dropdown {
+                float: right;
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                right: 0;
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 25px 20px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown a:hover {background-color: #ddd;}
+
+            .show {display: block;}
+            
+            
+            /*ส่วนรูปแบบหน้าเว็บ*/
+            /* resets */
+            body { margin:0px; padding:0px; }
+
+            /* main */
+            header {
+                height: 1px;
+                z-index: 1;
+            }
+            
+            .header-banner {
+                float: right;
+                background-color: #c00524;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 120px;
+            }
+            
+            /* demo content */
+            body { 
+                font-family: 'Prompt', sans-serif;
+                line-height: 0.1;
+            }
+            
+            .content{ 
+                margin: 100px;
+                padding: 4rem 0;
+                width: 1150px;
+                max-width: 100%;
+            }
+            
+            article p:first-of-type {
+                margin-top: 0;
+            }
+            
+            /*ใส่ Code CSS*/
+             .button {
+                 background-color: #4CAF50; /* Green */
+                 border: none;
+                 color: white;
+                 padding: 10px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                 border-radius: 12px;
+            }
+                .button1 {
+                 background-color: #f44336; /* Green */
+                 border: none;
+                 color: white;
+                 padding: 10px 24px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                 border-radius: 12px;
+            }
+            table,th,td{
+                border: 0.5px solid white;
+                border-collapse:collapse;
+            }
+            
+            th {background-color: #FFCC33}
+            td {background-color: #FFEFD5}
+            td#cell2{background-color: #FFE4B5}
+            
+            .buttonPlus {
+                font-family: 'Prompt', sans-serif;
+                /*border: 2px solid transparent;*/
+                background: #aeaeae;
+                color: #ffffff;
+                font-size: 16px;
+                line-height: 25px;
+                padding: 5px 0;
+                text-decoration: none;
+                text-shadow: none;
+                border-radius: 3px;
+                box-shadow: none;
+                transition: 0.25s;
+                /*display: block;*/
+                width: 100%;
+                /*margin: 0 auto;*/
+            }
+            
+            .buttonPlus:hover {
+                background-color: #777777;
+            }
+        </style>
+    </head>
+    
+    <body> <!-- HTML -->
+        <div>
+            <header> <!-- ส่วน Header แถบสีแดง -->
+                <div class="header-banner container">
+                    <img src="img/logo.gif" alt="x" width="430" height="120">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="p1.html">หน้าแรก</a>
+                                <a href="index.html">ออกจากระบบ</a>
+                            </div>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="content"> <!-- ส่วน Content สีขาวลงไป -->
+                <article> <!-- หัวเรื่องตัวสีแดง -->
+                    <p style="color:#c00524; font-size:35px"><b>ระบบการจดทะเบียนล่าช้า/เพิ่มล่าช้า (อาจารย์)</b></p>
+                    <p style="color:#c00524; font-size:20px">Delayed registration system</p>
+                </article>
+                
+                <p>&nbsp;</p>
+                <table align="left" width="100%" cellpadding="15"><tr><th width="100%" scope="col">สถานะ เป็น อาจารย์ที่ปรึกษา</tr></table>
+              
+                <table id="myTable" align="left" width="100%" cellpadding="15" >
+                  
+                    <tr>
+                        <th width="13%" scope="col">รหัสนักศึกษา</th>
+                        <th width="22%" scope="col">ชื่อนักศึกษา</th>
+                        <th width="6%" scope="col">ชั้นปี</th>
+                        <th width="11%" scope="col">สาขา</th>
+                        <th width="14%" scope="col">รหัสวิชา</th>
+                        <th width="17%" scope="col">เวลา</th>
+                        <th width="17%" scope="col">การอนุมัติ</th>
+                    </tr>
+                
+                    <tr>
+                        <td >6109650116</td>
+                        <td >นายณัฐดนัย ชำนิเกษตร</td>
+                        <td >2</td>
+                        <td >คอมพิวเตอร์(พิเศษ)</td>
+                        <td >CS234</td>
+                        <td >MO 9.30-12.30</td>
+                        <td align="center">
+                            <input type="button" class="button" onclick="alert('อนุมัติเรียบร้อย')"value="อนุมัติ" >
+                            <input type="button" class="button1" value="ไม่อนุมัติ" >
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="cell2">6109650298</td>
+                        <td id="cell2">นายนราวิชญ์ คล้ายวงษ์</td>
+                        <td id="cell2">2</td>
+                        <td id="cell2">คอมพิวเตอร์(พิเศษ)</td>
+                        <td id="cell2">CS262</td>
+                        <td id="cell2">TU 9.30-11.00 <p></p> TH 9.30-11.30</td>
+                        <td align="center" id="cell2">
+                            <input type="button" class="button" onclick="alert('อนุมัติเรียบร้อย')"value="อนุมัติ" >
+                            <input type="button" class="button1" value="ไม่อนุมัติ" >
+                        </td>
+                    </tr> 
+                    
+                    <tr>
+                        <td >6109650462</td>
+                        <td >นายชัยวัฒน์ ปั้นชู</td>
+                        <td >2</td>
+                        <td >คอมพิวเตอร์(พิเศษ)</td>
+                        <td >CS265</td>
+                        <td >TU 9.30-11.00 <p></p> TH 9.30-11.30</td>
+                        <td align="center">
+                            <input type="button" class="button" onclick="alert('อนุมัติเรียบร้อย')"value="อนุมัติ" >
+                            <input type="button" class="button1" value="ไม่อนุมัติ" >
+                        </td>
+                    </tr>  
+                </table>
+                <button type="button" class="buttonPlus" onclick="displayDataToTable()">แสดงเพิ่มเติม</button>
+              
+                <p>&nbsp;</p>
+                <table align="left" width="100%" cellpadding="15"><tr><th width="100%" scope="col">สถานะ เป็น อาจารย์ประจำรายวิชา/อาจารย์ผู้สอน</tr></table>
+              
+                <table id="myTable1" align="left" width="100%" cellpadding="15" >
+                  
+                    <tr>
+                        <th width="13%" scope="col">รหัสนักศึกษา</th>
+                        <th width="22%" scope="col">ชื่อนักศึกษา</th>
+                        <th width="6%" scope="col">ชั้นปี</th>
+                        <th width="11%" scope="col">สาขา</th>
+                        <th width="14%" scope="col">รหัสวิชา</th>
+                        <th width="17%" scope="col">เวลา</th>
+                        <th width="17%" scope="col">การอนุมัติ</th>
+                    </tr>
+                
+                    <tr>
+                        <td >6109650223</td>
+                        <td >นายปัณณธร เศรษฐวิศารทกุล</td>
+                        <td >2</td>
+                        <td >คอมพิวเตอร์(พิเศษ)</td>
+                        <td >CS264</td>
+                        <td >MO 9.30-12.30</td>
+                        <td align="center">
+                            <input type="button" class="button" onclick="alert('อนุมัติเรียบร้อย')"value="อนุมัติ" >
+                            <input type="button" class="button1" value="ไม่อนุมัติ" >
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="cell2">6109650207</td>
+                        <td id="cell2">นายฐิติกร ปรีชาบริสุทธิ์กุล</td>
+                        <td id="cell2">2</td>
+                        <td id="cell2">คอมพิวเตอร์(พิเศษ)</td>
+                        <td id="cell2">CS264</td>
+                        <td id="cell2">TU 9.30-11.00 <p></p> TH 9.30-11.30</td>
+                        <td align="center" id="cell2">
+                            <input type="button" class="button" onclick="alert('อนุมัติเรียบร้อย')"value="อนุมัติ" >
+                            <input type="button" class="button1" value="ไม่อนุมัติ" >
+                        </td>
+                    </tr> 
+                    
+                    <tr>
+                        <td >6109650520</td>
+                        <td >นายอภิสฤษฎิ์ บุญทรัพย์ทีปกร</td>
+                        <td >2</td>
+                        <td >คอมพิวเตอร์(พิเศษ)</td>
+                        <td >CS264</td>
+                        <td >TU 9.30-11.00 <p></p> TH 9.30-11.30</td>
+                        <td align="center">
+                            <input type="button" class="button" onclick="alert('อนุมัติเรียบร้อย')"value="อนุมัติ" >
+                            <input type="button" class="button1" value="ไม่อนุมัติ" >
+                        </td>
+                    </tr>  
+                </table>
+                <button type="button" class="buttonPlus" onclick="displayDataToTable1()">แสดงเพิ่มเติม</button>
+                
+                
+                <!--ใส่  Code HTML -->
+                
+            </section>
+            
+            <script> //Javascript
+                //ฟังก์ชันของปุ่มกดมุมขวาบน ในการที่กดแล้วยืดลงมาอะไรประมาณนี้
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                };
+
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                };
+                
+                var elements = [{"StudentID":"6109650603", "StudentName":"นายปฐวี กลั่นคูวัฒน์", "Year": 2, "Branch": "คอมพิวเตอร์(พิเศษ)", "SubjectCode": "CS264", "Time": "FR 09.30-12.30", "X": " "},
+                    {"StudentID":"6109650637", "StudentName":"นายภูบดี อารีย์สว่างกิจ", "Year": 2, "Branch": "คอมพิวเตอร์(พิเศษ)", "SubjectCode": "CS245", "Time": "TU 09.30-12.30", "X": " "},
+                    {"StudentID":"6109650363", "StudentName":"นายธนกร จันทร์ประสิทธิ์", "Year": 2, "Branch": "คอมพิวเตอร์(พิเศษ)", "SubjectCode": "CS233", "Time": "TU 09.30-12.30", "X": " "}]; 
+
+
+
+                function displayDataToTable(){
+                    for (var i =0 ; i<elements.length; i++) {
+                        let table = document.getElementById("myTable");
+
+                        // Create an empty <tr> element and add it to the last position of the table:
+                        let row = table.insertRow(-1);
+
+                        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                        let cell1 = row.insertCell(0);
+                        let cell2 = row.insertCell(1);
+                        let cell3 = row.insertCell(2);
+                        let cell4 = row.insertCell(3);
+                        let cell5 = row.insertCell(4);
+                        let cell6 = row.insertCell(5);
+                        let cell7 = row.insertCell(6);
+
+                        cell1.innerHTML = elements[i].StudentID;
+                        cell2.innerHTML = elements[i].StudentName;
+                        cell3.innerHTML = elements[i].Year;
+                        cell4.innerHTML = elements[i].Branch;
+                        cell5.innerHTML = elements[i].SubjectCode;
+                        cell6.innerHTML = elements[i].Time;
+                        cell7.innerHTML = elements[i].X;
+                    }
+                };
+                
+                var element1 = [{"StudentID":"6109650603", "StudentName":"นายปฐวี กลั่นคูวัฒน์", "Year": 2, "Branch": "คอมพิวเตอร์(พิเศษ)", "SubjectCode": "CS264", "Time": "FR 09.30-12.30", "X": " "},
+                    {"StudentID":"6109650637", "StudentName":"นายภูบดี อารีย์สว่างกิจ", "Year": 2, "Branch": "คอมพิวเตอร์(พิเศษ)", "SubjectCode": "CS264", "Time": "TU 09.30-12.30", "X": " "},
+                    {"StudentID":"6109650363", "StudentName":"นายธนกร จันทร์ประสิทธิ์", "Year": 2, "Branch": "คอมพิวเตอร์(พิเศษ)", "SubjectCode": "CS264", "Time": "TU 09.30-12.30", "X": " "}]; 
+
+
+
+                function displayDataToTable1(){
+                    for (var i =0 ; i<element1.length; i++) {
+                        let table = document.getElementById("myTable1");
+
+                        // Create an empty <tr> element and add it to the last position of the table:
+                        let row = table.insertRow(-1);
+
+                        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                        let cell1 = row.insertCell(0);
+                        let cell2 = row.insertCell(1);
+                        let cell3 = row.insertCell(2);
+                        let cell4 = row.insertCell(3);
+                        let cell5 = row.insertCell(4);
+                        let cell6 = row.insertCell(5);
+                        let cell7 = row.insertCell(6);
+
+                        cell1.innerHTML = element1[i].StudentID;
+                        cell2.innerHTML = element1[i].StudentName;
+                        cell3.innerHTML = element1[i].Year;
+                        cell4.innerHTML = element1[i].Branch;
+                        cell5.innerHTML = element1[i].SubjectCode;
+                        cell6.innerHTML = element1[i].Time;
+                        cell7.innerHTML = element1[i].X;
+                    }
+                };
+                
+            </script>
+        </div>
+    </body>
+</html>

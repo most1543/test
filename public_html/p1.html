@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +8,8 @@
         <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" sizes="16x16" href="https://tu.ac.th/templates/site/icons/favicon-16x16.png"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+            
         <style> /*CSS*/
             /*ส่วน menu มุมขวาบน*/
             .dropbtn {
@@ -80,7 +82,7 @@
             .content{ 
                 margin: 100px;
                 padding: 4rem 0;
-                width: 960px;
+                width: 1150px;
                 max-width: 100%;
             }
             
@@ -89,7 +91,84 @@
             }
             
             /*ใส่ Code CSS*/
+             .button {
+                 background-color: #689D5F; /* Green */
+                 /*border: none;*/
+                 color: #ffffff;
+                 padding: 5px 20%;
+                 text-align: center;
+                 /*text-decoration: none;*/
+                 display: inline-block;
+                 font-size: 16px;
+                 /*margin: 10px 10px;*/
+                 cursor: pointer;
+                 border-radius: 4px;
+            }
             
+            table,th,td{
+                border: 0.5px solid white;
+                border-collapse: collapse;
+            }
+            
+            th {background-color: #FFCC33;}
+            td {background-color: #FFEFD5;}
+            td#cell2{background-color: #FFE4B5;}
+            
+            th#c1 {
+                background-color: #2f73e2;
+                color: #ffffff;
+            }
+            td#c1 {background-color: #bcd4fa;}
+            td#c12 {background-color: #98bcf6;}
+            
+            .buttonPlus {
+                font-family: 'Prompt', sans-serif;
+                /*border: 2px solid transparent;*/
+                background: #aeaeae;
+                color: #ffffff;
+                font-size: 16px;
+                line-height: 25px;
+                padding: 5px 0;
+                text-decoration: none;
+                text-shadow: none;
+                border-radius: 3px;
+                box-shadow: none;
+                transition: 0.25s;
+                /*display: block;*/
+                width: 100%;
+                /*margin: 0 auto;*/
+            }
+            
+            .buttonPlus:hover {
+                background-color: #777777;
+            }
+            
+            .btn {
+                font-family: 'Prompt', sans-serif;
+                /*border: 2px solid transparent;*/
+                background: #D02D0A;
+                color: #ffffff;
+                font-size: 16px;
+                line-height: 25px;
+                padding: 5px 0;
+                text-decoration: none;
+                text-shadow: none;
+                border-radius: 3px;
+                box-shadow: none;
+                transition: 0.25s;
+                /*display: block;*/
+                width: 100px;
+                /*margin: 0 auto;*/
+            }
+
+            .btn:hover {
+                background-color: #972208;
+            }
+            
+            table #myTable1 {
+                background-color: #bcd4fa;
+                color: #000000;
+            }
         </style>
     </head>
     
@@ -108,69 +187,98 @@
                 </div>
             </header>
             
-          <section class="content"> <!-- ส่วน Content สีขาวลงไป -->
+            <section class="content"> <!-- ส่วน Content สีขาวลงไป -->
                 <article> <!-- หัวเรื่องตัวสีแดง -->
-                    <p style="color:#c00524; font-size:35px"><b>ระบบการจดทะเบียนล่าช้า/เพิ่มล่าช้า (นักศึกษา)</b></p>
+                    <p style="color:#c00524; font-size:35px"><b>ระบบการจดทะเบียนล่าช้า/เพิ่มล่าช้า</b></p>
                     <p style="color:#c00524; font-size:20px">Delayed registration system</p>
                 </article>
-                <p>>>></p>
-                <p>ข้อมูลนักศึกษา</p>
-                <p>ชื่อ-นามสกุล นักศึกษา_____________เลขทะเบียน_____________ชั้นปีที่__</p>
-                <p>คณะ_____________________สาขา______________________________</p>
-                <p>ที่อยู่ที่ติดต่อได้______แขวง/ตำบล_______เขต/อำเภอ_________จังหวัด__________</p>
-                <p>โทรศัพท์ติดต่อนักศึกษา____________โทรศัพท์ติดต่อผู้ปกครอง____________</p>
-                <p>อาจารย์ที่ปรึกษา______________________</p>
+                
                 <p>&nbsp;</p>
-            <p>ภาคการศึกษาที่______</p>
-            <p>ประสงค์จะยื่นคำร้อง รหัสวิชา _______</p>
+                <p style="font-size: 18px; width: 960px; line-height: 10px;"><b>ข้อมูลนักศึกษา</b></p>
+                <p style="font-size: 16px; width: 960px; line-height: 5.5px;">ชื่อ-นามสกุล นักศึกษา นายสุขกาย สบายใจ เลขทะเบียน  6609650123 ชั้นปีที่ 1</p>
+                <p style="font-size: 16px; width: 960px; line-height: 5.5px;">คณะ วิทยาศาสตร์และเทคโนโลยี สาขา วิทยาการคอมพิวเตอร์(ปริญญาตรี โครงการพิเศษ)</p>
+                <p style="font-size: 16px; width: 960px; line-height: 5.5px;">ที่อยู่ที่ติดต่อได้ 11/111 แขวง/ตำบล คลองหนึ่ง เขต/อำเภอ คลองหลวง จังหวัด ปทุมธานี</p>
+                <p style="font-size: 16px; width: 960px; line-height: 5.5px;">โทรศัพท์ติดต่อนักศึกษา 081-111-1111 โทรศัพท์ติดต่อผู้ปกครอง 082-222-2222</p>
+                <p style="font-size: 16px; width: 960px; line-height: 5.5px;">อาจารย์ที่ปรึกษา ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช</p>
                 
-                
-                <table width="99%" border="1" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <th width="14%" height="20" scope="col">รหัสวิชา</th>
-                    <th width="25%" scope="col">ชื่อวิชา</th>
-                    <th width="14%" scope="col">หน่วยกิต</th>
-                    <th width="11%" scope="col">Sec/Gr</th>
-                    <th width="14%" scope="col">จดทะเบียนแบบ</th>
-                    <th width="9%" scope="col">เวลา</th>
-                    <th width="13%" scope="col">ตัวเลือกยืนยัน</th>
-                  </tr>
-                  <tr>
-                    <td height="15">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <td height="15">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <td height="15">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
+                <p>&nbsp;</p>
+                <p style="font-size: 18px; width: 960px; line-height: 10px;"><b>รายการที่ส่งคำร้องแล้ว  </b><button onclick="myHide()">Hide/Show</button></p>
+                <table id="myTable1" align="left" width="100%" cellpadding="15">
+                    <tr>
+                        <th id="c1" width="25%" scope="col" class="styleTableHead">รหัสวิชา</th>
+                        <th id="c1" width="75%" scope="col" class="styleTableHead">สถานะ</th>
+                    </tr>
+                    
+                    <tr>
+                        <td id="c1">CS245</td>
+                        <td id="c1"><a href="#">รอยืนยัน จาก อาจารย์ที่ปรึกษา</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="c12">TU100</td>
+                        <td id="c12"><i style='font-size:24px;color:green' class='fas'>&#xf058;</i><a href="#">   ได้รับการอนุมัติแล้ว</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="c1">CS111</td>
+                        <td id="c1"><a href="#">รอยืนยัน จาก คณบดี</a></td>
+                    </tr>
                 </table>
+                
                 <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p style="font-size: 18px; width: 960px"><b>ภาคการศึกษาที่ </b> 1/2566 </p>
+                <p style="font-size: 18px; width: 960px"><b>ประสงค์จะยื่นคำร้อง รหัสวิชา <input type="text" style="font-size: 20pt; text-align: left"></b> <button type="button" class="btn">search</button></p>
                 
-                <p><a href="p3.html">Link</a></p>
+                <table id="myTable" align="left" width="100%" cellpadding="15" >
+                    <tr>
+                        <th width="14%" scope="col">รหัสวิชา</th>
+                        <th width="20%" scope="col">ชื่อวิชา</th>
+                        <th width="5%" scope="col">หน่วยกิต</th>
+                        <th width="11%" scope="col">Sec/Gr</th>
+                        <th width="14%" scope="col">จดทะเบียนแบบ</th>
+                        <th width="18%" scope="col">เวลา</th>
+                        <th width="17%" scope="col">ตัวเลือกยืนยัน</th>
+                    </tr>
                 
+                    <tr>
+                        <td>CS264</td>
+                        <td>วิศวกรรมซอฟต์แวร์เบื้องต้น</td>
+                        <td>3</td>
+                        <td>680101</td>
+                        <td>Credit</td>
+                        <td>WE 13.30-15.00<p>&nbsp;</p>FR 13.30-15.00</td>
+                        <td align="center">
+                            <button type="button" class="button" onclick="window.location.href='p2.html'">ยืนยัน</button>
+                        </td>
+                    </tr>
                 
+                    <tr>
+                        <td id="cell2">CS264</td>
+                        <td id="cell2">วิศวกรรมซอฟต์แวร์เบื้องต้น</td>
+                        <td id="cell2">3</td>
+                        <td id="cell2">650201</td>
+                        <td id="cell2">Credit</td>
+                        <td id="cell2">TU 13.30-15.00<p>&nbsp;</p>TH 13.30-15.00</td>
+                        <td align="center" id="cell2">
+                            <button type="button" class="button" onclick="window.location.href='p2.html'">ยืนยัน</button>
+                        </td>
+                    </tr>
                 
-                <!--ใส่  Code HTML -->
+                    <tr>
+                        <td>CS264</td>
+                        <td>วิศวกรรมซอฟต์แวร์เบื้องต้น</td>
+                        <td>3</td>
+                        <td>650101</td>
+                        <td>Credit</td>
+                        <td>WE 15.30-16.30<p>&nbsp;</p>FR 15.00-16.30</td>
+                        <td id="button" align="center">
+                            <button type="button" class="button" onclick="window.location.href='p2.html'">ยืนยัน</button>
+                        </td>
+                    </tr> 
+                </table>
                 
+                <button type="button" class="buttonPlus" onclick="displayDataToTable()">แสดงเพิ่มเติม</button>
             </section>
             
             <script> //Javascript
@@ -192,8 +300,47 @@
                     }
                 };
                 
-                //ใส่ Code Javascript 
+                var elements = [{"SubjectCode":"CS264", "SubjectName":"วิศวกรรมซอฟต์แวร์เบื้องต้น", "Credit": 3, "Sec": 650001, "Format": "Credit", "Time": "FR 09.30-12.30", "X": " "},
+                    {"SubjectCode":"CS264", "SubjectName":"วิศวกรรมซอฟต์แวร์เบื้องต้น", "Credit": 3, "Sec": 680001, "Format": "Credit", "Time": "TU 09.30-12.30", "X": " "},
+                    {"SubjectCode":"CS264", "SubjectName":"วิศวกรรมซอฟต์แวร์เบื้องต้น", "Credit": 3, "Sec": 680111, "Format": "Credit", "Time": "TU 09.30-12.30", "X": " "}]; 
+
+
+
+                function displayDataToTable(){
+
+                    for (var i =0 ; i<elements.length; i++) {
+                        let table = document.getElementById("myTable");
+
+                        // Create an empty <tr> element and add it to the last position of the table:
+                        let row = table.insertRow(-1);
+
+                        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                        let cell1 = row.insertCell(0);
+                        let cell2 = row.insertCell(1);
+                        let cell3 = row.insertCell(2);
+                        let cell4 = row.insertCell(3);
+                        let cell5 = row.insertCell(4);
+                        let cell6 = row.insertCell(5);
+                        let cell7 = row.insertCell(6);
+
+                        cell1.innerHTML = elements[i].SubjectCode;
+                        cell2.innerHTML = elements[i].SubjectName;
+                        cell3.innerHTML = elements[i].Credit;
+                        cell4.innerHTML = elements[i].Sec;
+                        cell5.innerHTML = elements[i].Format;
+                        cell6.innerHTML = elements[i].Time;
+                        cell7.innerHTML = elements[i].X;
+                    }
+                };
                 
+                function myHide() {
+                    var x = document.getElementById("myTable1");
+                    if (x.style.display === "none") {
+                        x.style.display = "table";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
             </script>
         </div>
     </body>
